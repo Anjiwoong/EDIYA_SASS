@@ -75,6 +75,176 @@
     </header>
 
     <!-- Main -->
+    <section class="news">
+      <h2 class="sr-only">뉴스</h2>
+      <nav class="news__nav">
+        <ul class="news__nav__list">
+          <li class="news__nav__item" role="tablist">
+            <a href="#" role="tab" class="news__nav__link">공지사항</a>
+          </li>
+          <li class="news__nav__item" role="tablist">
+            <a href="#" role="tab" class="news__nav__link">언론 속 이디야</a>
+          </li>
+          <li class="news__nav__item" role="tablist">
+            <a href="#" role="tab" class="news__nav__link">홍보영상</a>
+          </li>
+          <li class="news__nav__item" role="tablist">
+            <a href="#" role="tab" class="news__nav__link">수상내역</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 공지사항 -->
+      <section class="news__notice">
+        <h3 class="news__notice__title">공지사항</h3>
+        <p class="news__notice__detail">알아서</p>
+      </section>
+
+      <!-- 언론 속 이디야 -->
+      <section class="news__social">
+        <h3 class="news__social__title">언론 속 이디야</h3>
+        <p class="news__social__detail">dleldi</p>
+        <form action="news__social__form">
+          <select name="" id="" class="news__social__select">
+            <option value=""></option>
+            <option value=""></option>
+          </select>
+          <label for="" class="sr-only"></label>
+          <input
+            type="text"
+            placeholder="검색어 일벼"
+            class="news__social__search"
+          />
+          <button class="news__social__searchbtn"></button>
+        </form>
+        <article class="news__social__contents">
+          <div role="table" class="news__social__header">
+            <div role="rowgroup" class="">
+              <div
+                role="row"
+                class="news__social__header__list news__social__header__list__header"
+              >
+                <span role="columnheader" class="news__social__header__order"
+                  >순서</span
+                >
+                <span role="columnheader" class="news__social__header__order"
+                  >내용</span
+                >
+                <span role="columnheader" class="news__social__header__order"
+                  >날짜</span
+                >
+              </div>
+            </div>
+            <div role="rowgroup">
+              <div role="row">
+                <span role="cell" class="news__social__contents__index"
+                  >16</span
+                >
+                <a href="news__social__contents__link" role="cell">
+                  <span class="news__social__contents__title">타이틀</span>
+                  <p class="news__social__contents__detail">디테일</p>
+                </a>
+                <time role="cell" class="news__social__contents__time"
+                  >2022-06-02</time
+                >
+              </div>
+              <div role="row">
+                <span role="cell" class="news__social__contents__index"
+                  >16</span
+                >
+                <a href="news__social__contents__link" role="cell">
+                  <span class="news__social__contents__title">타이틀</span>
+                  <p class="news__social__contents__detail">디테일</p>
+                </a>
+                <time role="cell" class="news__social__contents__time"
+                  >2022-06-02</time
+                >
+              </div>
+              <div role="row">
+                <span role="cell" class="news__social__contents__index"
+                  >16</span
+                >
+                <a href="news__social__contents__link" role="cell">
+                  <span class="news__social__contents__title">타이틀</span>
+                  <p class="news__social__contents__detail">디테일</p>
+                </a>
+                <time role="cell" class="news__social__contents__time"
+                  >2022-06-02</time
+                >
+              </div>
+            </div>
+          </div>
+          <nav class="news__social__pagination" aria-label="pagination">
+            <ul class="news__social__pagination__list">
+              <li class="news__social__pagination__item">
+                <a
+                  href=""
+                  class="news__social__pagination__link"
+                  aria-current="page"
+                  aria-label="page 1"
+                  >1</a
+                >
+              </li>
+              <li class="news__social__pagination__item">
+                <a href="" class="news__social__pagination__link">2</a>
+              </li>
+              <li class="news__social__pagination__item">
+                <a href="" class="news__social__pagination__link">3</a>
+              </li>
+              <li class="news__social__pagination__item">
+                <a href="" class="news__social__pagination__link">4</a>
+              </li>
+            </ul>
+          </nav>
+        </article>
+      </section>
+
+      <!-- 홍보영상 -->
+      <section class="news__notice">
+        <h3 class="news__notice__title">홍보영상</h3>
+        <p class="news__notice__detail">알아서</p>
+      </section>
+
+      <!-- 수상내역 -->
+      <section class="news__prize">
+        <h3 class="news__prize__title">홍보영상</h3>
+        <p class="news__prize__detail">알아서</p>
+
+        <div class="news__prize__wrapper">
+          <div class="news__prize__list">
+            <h4 class="news__prize__year">2019</h4>
+            <article class="news__prize__article">
+              <details>
+                <summary>제목</summary>
+                <img src="" alt="thumbnail" />
+                <p>어쩌고저쩌고</p>
+                <span>수상일</span>
+                <time>2022-06-02</time>
+              </details>
+            </article>
+            <article class="news__prize__article">
+              <details>
+                <summary>제목</summary>
+                <img src="" alt="thumbnail" />
+                <p>어쩌고저쩌고</p>
+                <span>수상일</span>
+                <time>2022-06-02</time>
+              </details>
+            </article>
+            <article class="news__prize__article">
+              <details>
+                <summary>제목</summary>
+                <img src="" alt="thumbnail" />
+                <p>어쩌고저쩌고</p>
+                <span>수상일</span>
+                <time>2022-06-02</time>
+              </details>
+            </article>
+          </div>
+          <div class="news__prize__list"></div>
+          <div class="news__prize__list"></div>
+        </div>
+      </section>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">

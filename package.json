@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "run-p watch server",
+    "start": "run-p watch dev",
     "sass": "sass sass:css",
     "watch": "npm run sass -- --watch",
     "dev": "live-server",
