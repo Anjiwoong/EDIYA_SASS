@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>홈 - 이디야 커피(Ediya Coffee)</title>
+    <meta
+      name="description"
+      content="이디야 커피 브랜드 사이트 (학습용) 홈페이지입니다."
+    />
+    <meta
+      name="keywords"
+      content="이디야, 커피, 브랜드, 사이트, 학습용, 홈페이지, 이듬, 블렌디드 러닝"
+    />
+    <meta name="author" content="이듬(E.UID)" />
+    <!-- 스타일링 -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+
+    <!-- 스크립트: 즉시 실행 -->
+    <script src="./js/utils/dom.js"></script>
+    <script src="./js/utils/mixins.js"></script>
+    <script src="./js/utils/isDevelopmentMode.js"></script>
+    <script src="./js/polyfills/unfetch.js"></script>
+    <script src="./js/components/navigation/Navigation.js"></script>
+    <script src="./js/components/navigation/NavigationItem.js"></script>
+    <script src="./js/components/goToTop/GoToTop.js"></script>
+
+    <!-- 스크립트: DOM 콘텐츠 준비 이후 실행 -->
+    <script src="./js/navigationControl.js" defer></script>
+
+    <!-- 처음으로 가기 버튼 (스태틱 마크업) DOM 스크립트 -->
+    <script src="./js/goToTopControl.js" defer></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo__container">
+        <h1 class="sr-only">이디야커피</h1>
+        <a href="./index.html"
+          ><img src="'./images/brand.svg" alt="이디야커피"
+        /></a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__item">
+            <a href="./views/login.html" class="header__nav__link">로그인</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="./views/signup.html" class="header__nav__link">회원가입</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="./index.html" class="header__nav__link">이디야 디자인</a>
+          </li>
+          <li class="header__nav__item">
+            <a href="./views/beverages.html" class="header__nav__link"
+              >이디야 음료</a
+            >
+          </li>
+          <li class="header__nav__item">
+            <a href="./views/news.html" class="header__nav__link"
+              >이디야 뉴스</a
+            >
+          </li>
+          <li class="header__nav__item">
+            <a href="./views/map.html" class="header__nav__link">매장 찾기</a>
+          </li>
+        </ul>
+      </nav>
+      <button type="button" class="header__hamburger">
+        <span class="header__hamburger__top"></span>
+        <span class="header__hamburger__middle"></span>
+        <span class="header__hamburger__bottom"></span>
+      </button>
+    </header>
+
+    <!-- Main -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a href="#" class="footer__link"></a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">나중에 </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">나중에 </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">나중에 </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">나중에 </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">나중에 </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">나중에 </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__link">나중에 </a>
+        </li>
+      </ul>
+      <address class="footer__info">
+        <div class="footer__logo">
+          <h2 class="sr-only">알아서</h2>
+          <img src="" alt="#" />
+        </div>
+        <p class="footer__address">
+          <span></span>
+          <a href="tel:" type=""></a>
+          <a href="tel:" type=""></a>
+          <span>알아서</span>
+          <span></span>
+          <span></span>
+        </p>
+        <small class="footer__copy"> &copy; </small>
+      </address>
+    </footer>
+  </body>
+</html>

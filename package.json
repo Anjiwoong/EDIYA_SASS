@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "start": "run-p watch server",
+    "sass": "sass sass:css",
+    "watch": "npm run sass -- --watch",
+    "dev": "live-server",
+    "build:sass": "npm run sass -- --no-source-map",
+    "build:postcss": "postcss css/style.css -o css/style.css",
+    "build": "run-s build:sass build:postcss"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "chokidar-cli": "^2.1.0",
+    "live-server": "^1.2.1",
+    "normalize-scss": "^7.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.13",
+    "postcss-cli": "^8.3.1",
+    "postcss-combine-media-query": "^1.0.1",
+    "postcss-csso": "^5.0.1",
+    "sass": "^1.32.8"
+  }
+}
