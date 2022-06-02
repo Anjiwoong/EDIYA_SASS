@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "run-p watch dev",
-    "sass": "sass sass:css",
+    "sass": "sass scss:css",
     "watch": "npm run sass -- --watch",
     "dev": "live-server",
     "build:sass": "npm run sass -- --no-source-map",
