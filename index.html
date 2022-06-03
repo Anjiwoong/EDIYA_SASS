@@ -14,6 +14,7 @@
     />
     <meta name="author" content="이듬(E.UID)" />
     <!-- 스타일링 -->
+
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
 
@@ -35,10 +36,10 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header__logo__container">
-        <h1 class="sr-only">이디야커피</h1>
-        <a href="./index.html"
-          ><img src="'./images/brand.svg" alt="이디야커피"
+      <div class="header__logo">
+        <h1 class="sr-only">늘 당신 곁에, 이디야커피 공식 홈페이지 입니다.</h1>
+        <a href="./index.html" class="header__logo__link"
+          ><img src="./images/brand.svg" alt="이디야커피"
         /></a>
       </div>
       <nav class="header__nav">
@@ -66,8 +67,19 @@
             <a href="./views/map.html" class="header__nav__link">매장 찾기</a>
           </li>
         </ul>
+        <button
+          type="button"
+          class="header__nav__close__button buttonNone"
+          aria-label="메뉴 닫기"
+        >
+          <span aria-hidden="true">x</span>
+        </button>
       </nav>
-      <button type="button" class="header__hamburger">
+      <button
+        type="button"
+        class="header__hamburger buttonNone"
+        aria-label="메뉴 열기"
+      >
         <span class="header__hamburger__top"></span>
         <span class="header__hamburger__middle"></span>
         <span class="header__hamburger__bottom"></span>
@@ -84,17 +96,25 @@
       <p class="promotion__subtitle">
         늘 당신 곁에, 이디야 커피의 다양한 메뉴를 맛보세요.
       </p>
-      <img src="./images//cheese-" alt="치즈쿠키쉐이크" />
       <img
+        class="promotion__product promotion__product__left"
+        src="./images/cheese-cookie-img.png"
+        alt="치즈쿠키쉐이크"
+      />
+      <img
+        class="promotion__product promotion__product__right"
         src="./images/choco-rice-img.png"
         alt="초코 묻고 더블쉐이크,밥대신 라이스쉐이크"
       />
-      <a href="'./views/beverages.html" role="button" class="promotion__button"
+      <a
+        href="./views/beverages.html"
+        role="button"
+        class="promotion__button buttonNone"
         >메뉴보기</a
       >
     </section>
     <section class="about">
-      <h2 class="sr-only">알아서 쓰셍쇼</h2>
+      <h2 class="sr-only">이디야 커피 고객감사 영상</h2>
       <div class="about__video">
         <iframe
           width="1264"
@@ -106,54 +126,106 @@
           allowfullscreen
         ></iframe>
       </div>
-      <article class="about__info">
-        <div class="about__notice"></div>
-        <div class="about__news"></div>
-      </article>
+      <section class="about__info">
+        <article class="about__notice">
+          <h2 class="about__notice__title sr-only">공지사항</h2>
+          <a class="about__notice__main">
+            <h3 class="about__notice__main__title">
+              이디야 멤버스가 새로워집니다.
+            </h3>
+            <time class="about__notice__main__time">2022.06.03</time>
+            <p class="about__notice__main__detail">
+              이디야멤버스에 새로운 기능이 추가됩니다. 추가되는 고객등급제,
+              이디야카드, 스마트 ...
+            </p>
+          </a>
+          <div class="about__notice__button">
+            <span
+              class="about-notice__title__text"
+              aria-hidden="ture"
+              NOTICE
+            ></span>
+            <button class="about__notice__button__prev"></button>
+            <button class="about__notice__button__next"></button>
+          </div>
+        </article>
+        <article class="about__news">
+          <h2 class="about__news__title sr-only">언론 속 이디야</h2>
+          <span class="about__news__title__text" aria-hidden="ture">NEWS</span>
+          <ul class="about__news__list">
+            <li class="about__news__item">
+              <a href="#" class="about__news__link"
+                >[MTN] 이디야커피, 조각 케이크 2종 출시 …
+              </a>
+              <time class="about__news__time">2020.09.08</time>
+            </li>
+            <li class="about__news__item">
+              <a href="#" class="about__news__link"
+                >[아시아 경제] 이디야커피, '비니스트 커피믹스 …</a
+              >
+              <time class="about__news__time">2020.08.27</time>
+            </li>
+          </ul>
+          <a
+            href="#"
+            type="button"
+            class="about__news__link"
+            aria-label="언론 속 이디야 이동 하기 버튼"
+          >
+            <img src="/images/icon-search.svg" alt="" />
+          </a>
+        </article>
+      </section>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
       <ul class="footer__list">
         <li class="footer__item">
-          <a href="#" class="footer__link"></a>
+          <a href="#" class="footer__link">개인정보처리방침</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">맴버스 이용약관</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">가맹 안내</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">대량쿠폰구매</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">채용안내</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">고객의 소리</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">사이트맵</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">점주의 방</a>
         </li>
       </ul>
       <address class="footer__info">
         <div class="footer__logo">
-          <h2 class="sr-only">알아서</h2>
-          <img src="" alt="#" />
+          <h2 class="sr-only">이디야커피 연락 정보 입니다.</h2>
+          <img src="./images/brand-dark.svg" alt="이디야커피" />
         </div>
         <p class="footer__address">
-          <span></span>
-          <a href="tel:" type=""></a>
-          <a href="tel:" type=""></a>
-          <span>알아서</span>
-          <span></span>
-          <span></span>
+          <span
+            >서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동
+            221-17)</span
+          >
+          <a href="tel:+82-02-543-6467" type="">TEL : 02-543-6467</a>
+          <a href="fax:+82-02-543-7191" type="">FAX : 02-543-7191</a>
+          <span class="footer__address__bold">사업자등록번호</span> :
+          107-86-16302
+          <span class="footer__address__bold">통신판매업 신고</span> : 강남 제
+          002519호 <span class="footer__address__bold">대표이사</span> : 문창기
         </p>
-        <small class="footer__copy"> &copy; </small>
+        <small class="footer__copy">
+          &copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</small
+        >
       </address>
     </footer>
   </body>

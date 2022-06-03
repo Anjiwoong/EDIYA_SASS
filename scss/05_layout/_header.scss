@@ -1,3 +1,158 @@
 // 헤더 시작 ------------------------------------------------------------------------ /
+.sr-only {
+  @include a11yHidden;
+}
+
+.buttonNone {
+  appearance: none;
+  pointer-events: none;
+  border: 0;
+  background-color: $grayscaleWhite;
+  color: $white;
+  font-size: 0.875rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+
+  @include paddingX(16px);
+  @include paddingY(8px);
+}
+
+.header {
+  background: $grayscaleWhite;
+  height: rem(50px);
+  @include flexbox($justify: space-between, $items: center);
+
+  @include desktop {
+    @include autoMargin;
+    width: rem(740px);
+  }
+}
+
+/* logo */
+.header__logo {
+  @include mobile {
+    padding: rem(18px);
+    &__link {
+      position: relative;
+      height: rem(50px);
+    }
+  }
+
+  @include desktop {
+    &__link {
+      height: rem(50px);
+    }
+  }
+
+  &__link img {
+    @include centerTranslateY;
+    height: rem(14px);
+    vertical-align: bottom;
+  }
+}
+
+/* header nav bar */
+.header__nav {
+  @include mobile {
+    @include pos;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(120%);
+    backdrop-filter: blur(5px);
+    background-color: $grayscaleDarkGray;
+    z-index: 100;
+  }
+
+  &__list {
+    @include mobile {
+      margin-top: rem(106px);
+      @include flexbox($direction: column, $items: center);
+    }
+
+    @include desktop {
+      @include flexbox;
+    }
+  }
+
+  &__item {
+    @include mobile {
+      @include boxSizeMinMax;
+      height: rem(40px);
+      align-items: center;
+      border-bottom: 1px solid $grayscaleDarkGray2;
+      padding-left: rem(18px);
+    }
+  }
+
+  &__link {
+    @include mobile {
+      @include marginY(18px);
+      display: inline-block;
+      width: 100%;
+      color: $grayscaleWhite;
+      font-size: rem(14px);
+    }
+
+    padding-left: rem(8px);
+
+    color: $primaryBlue;
+    font-size: rem(15px);
+    line-height: rem(22.2px);
+  }
+
+  &__close__button {
+    @include pos;
+    top: 0.5rem;
+    right: 0.5rem;
+    width: rem(18px);
+    height: rem(18px);
+    background: transparent;
+  }
+
+  &__close__button span {
+    @include flexbox($justify: center);
+    width: rem(18px);
+    width: rem(18px);
+    color: $grayscaleWhite;
+  }
+}
+
+/* hamburger button */
+@include mobile {
+  .header__hamburger {
+    position: relative;
+    margin: rem(18px);
+    width: rem(18px);
+    height: rem(14px);
+
+    &__top,
+    &__middle,
+    &__bottom {
+      @include pos;
+      width: rem(18px);
+      height: 2px;
+      background: $grayscaleGray;
+    }
+
+    &__top {
+      top: 0;
+    }
+
+    &__middle {
+      @include centerTranslateY($percent: -100%);
+    }
+
+    &__bottom {
+      bottom: 0;
+      transform: translateY(-100%);
+    }
+  }
+
+  .header__hamburger.is-active {
+  }
+}
 
 // 헤더 종료 --------------------------------------------------------------------- /
+//

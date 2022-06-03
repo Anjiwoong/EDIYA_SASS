@@ -1,3 +1,31 @@
 // 푸터 시작 --------------------------------------------------------------------- /
+.footer {
+  background: $grayscaleBlack;
+  @include paddingY(18px);
+  text-align: center;
+  color: $grayscaleGray2;
+
+  @include desktop {
+    @include autoMargin;
+  }
+
+  &__list {
+    @include flexbox($wrap: wrap, $justify: center);
+    border-bottom: 1px solid #fff;
+  }
+
+  &__item {
+  }
+
+  &__info {
+    @include flexbox($direction: column);
+  }
+
+  &__logo {
+  }
+
+  &__address {
+  }
+}
 
 // 푸터 종료 --------------------------------------------------------------------- /

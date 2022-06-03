@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // padding 관련 믹스인
 @mixin paddingX($paddingX: 0) {
   padding-left: rem($paddingX);
@@ -43,4 +45,34 @@
   flex-flow: $direction $wrap;
   justify-content: $justify;
   align-items: $items;
+}
+
+@mixin pos($position: absolute) {
+  position: $position;
+}
+
+// 이미지 중앙 정렬 (50$)
+@mixin centerTranslateY($percent: -50%) {
+  top: 50%;
+  transform: translateY($percent);
+}
+
+@mixin centerTranslateX($percent: -50%) {
+  left: 50%;
+  transform: translateX($percent);
+}
+
+// iframe 비율
+@mixin respondIframe($w: 16, $h: 9) {
+  position: relative;
+  padding-top: math.div($h, $w) * 100%;
+  height: 0 !important;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
