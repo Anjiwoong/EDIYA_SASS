@@ -99,8 +99,6 @@ body {
   /* iframe  */
   @include autoMargin;
 
-  width: rem(740px);
-
   background: $grayscaleWhite;
 
   @include mobile {
@@ -108,6 +106,7 @@ body {
   }
 
   @include desktop {
+    width: rem(740px);
     margin-top: rem(322px);
   }
 }
@@ -120,12 +119,37 @@ body {
 .about__info {
   @include flexbox;
 
+  @include mobile {
+    flex-direction: column;
+  }
+
   @include desktop {
   }
 }
 
 // notice
 .about__notice {
+  @include mobile {
+  }
+
+  @include desktop {
+    width: 50%;
+  }
+
+  &__button {
+    background: $gradientBlue;
+    color: $white;
+  }
+}
+
+// news
+.about__news {
+  @include mobile {
+  }
+
+  @include desktop {
+    width: 50%;
+  }
 }
 
 // 이디야 홈(메인 페이지) 종료 ------------------------------------------------------------------ /
