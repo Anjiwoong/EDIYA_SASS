@@ -18,11 +18,12 @@
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
 
     <script src="../js/beverageControl.js" defer></script>
+    <script src="../js/goToTopControl.js" defer></script>
     <!-- 스크립트: 즉시 실행 -->
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" id="header">
       <div class="header__logo">
         <h1 class="sr-only">늘 당신 곁에, 이디야커피 공식 홈페이지 입니다.</h1>
         <a href="./index.html" class="header__logo__link"
@@ -311,6 +312,13 @@
           </div>
         </li>
       </ul>
+
+      <div class="up__btn">
+        <a href="#header" class="up__btn__arrow">
+          <span class="up__btn__arrow__1"></span>
+          <span class="up__btn__arrow__2"></span>
+        </a>
+      </div>
     </section>
 
     <!-- Footer -->

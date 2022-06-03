@@ -943,6 +943,9 @@ body {
   border-left: 1px solid #919bc6;
 }
 
+.beverage {
+  position: relative;
+}
 .beverage__list {
   display: flex;
   flex-flow: row wrap;
@@ -1192,6 +1195,45 @@ body {
     justify-content: center;
     align-items: flex-end;
   }
+}
+.beverage .up__btn.go__up {
+  display: block;
+}
+.beverage .up__btn {
+  display: none;
+  width: 3.125rem;
+  height: 3.125rem;
+  background: #c8cde2;
+  border-radius: 50%;
+  position: absolute;
+  right: 1.5625rem;
+  bottom: 1.5rem;
+}
+.beverage .up__btn__arrow {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.beverage .up__btn__arrow__1 {
+  position: absolute;
+  display: block;
+  border-top: 2px solid black;
+  width: 45%;
+  top: 46%;
+  left: 28%;
+  transform: rotate(90deg);
+}
+.beverage .up__btn__arrow__2 {
+  position: absolute;
+  display: block;
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  width: 13px;
+  height: 13px;
+  left: 49%;
+  top: 40%;
+  transform: rotate(45deg) translate(-65%);
 }
 
 .login {
