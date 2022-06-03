@@ -1,34 +1,16 @@
-(function beverageControl() {
-  'use strict';
+const $info = document.querySelectorAll(".beverage__button");
+const $button = document.querySelectorAll(".beverage__info__closebtn");
 
-  var apiAddress = '/api/beverages.json';
-  var ediyaMenuList = null;
+$info.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    const $wrap = item.nextElementSibling;
+    $wrap.classList.add("is-active");
+  });
+});
 
-  function init() {
-    ediyaMenuList = document.querySelector('.ediya-menu');
-    fetchData((isDevelopmentMode() ? '' : '/EDIYA') + apiAddress);
-  }
-
-  function fetchData(api) {
-    fetch(api)
-      .then(function(response) {
-        return response.json();
-      })
-      .then(function(json) {
-        var beverages = json.data;
-        render(beverages);
-      })
-      .catch(function(error) {
-        console.error(error.message);
-      });
-  }
-
-  function render(beverages) {
-    new CardList(ediyaMenuList, {
-      list: beverages,
-      templateId: '#template-ediya-menu__item',
-    });
-  }
-
-  window.addEventListener('DOMContentLoaded', init);
-})();
+$button.forEach((item) => {
+  item.addEventListener("click", () => {
+    const $wrap = item.closest("div");
+    $wrap.classList.remove("is-active");
+  });
+});
