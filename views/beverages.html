@@ -17,57 +17,52 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
 
+    <script src="../js/beverageControl.js" defer></script>
     <!-- 스크립트: 즉시 실행 -->
-    <script src="./js/utils/dom.js"></script>
-    <script src="./js/utils/mixins.js"></script>
-    <script src="./js/utils/isDevelopmentMode.js"></script>
-    <script src="./js/polyfills/unfetch.js"></script>
-    <script src="./js/components/navigation/Navigation.js"></script>
-    <script src="./js/components/navigation/NavigationItem.js"></script>
-    <script src="./js/components/goToTop/GoToTop.js"></script>
-
-    <!-- 스크립트: DOM 콘텐츠 준비 이후 실행 -->
-    <script src="./js/navigationControl.js" defer></script>
-
-    <!-- 처음으로 가기 버튼 (스태틱 마크업) DOM 스크립트 -->
-    <script src="./js/goToTopControl.js" defer></script>
   </head>
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="header__logo__container">
-        <h1 class="sr-only">이디야커피</h1>
-        <a href="./index.html"
-          ><img src="'./images/brand.svg" alt="이디야커피"
+      <div class="header__logo">
+        <h1 class="sr-only">늘 당신 곁에, 이디야커피 공식 홈페이지 입니다.</h1>
+        <a href="./index.html" class="header__logo__link"
+          ><img src="./images/brand.svg" alt="이디야커피"
         /></a>
       </div>
       <nav class="header__nav">
         <ul class="header__nav__list">
           <li class="header__nav__item">
-            <a href="./views/login.html" class="header__nav__link">로그인</a>
+            <a href="./login.html" class="header__nav__link">로그인</a>
           </li>
           <li class="header__nav__item">
-            <a href="./views/signup.html" class="header__nav__link">회원가입</a>
+            <a href="./signup.html" class="header__nav__link">회원가입</a>
           </li>
           <li class="header__nav__item">
             <a href="./index.html" class="header__nav__link">이디야 디자인</a>
           </li>
           <li class="header__nav__item">
-            <a href="./views/beverages.html" class="header__nav__link"
-              >이디야 음료</a
-            >
+            <a href="./beverages.html" class="header__nav__link">이디야 음료</a>
           </li>
           <li class="header__nav__item">
-            <a href="./views/news.html" class="header__nav__link"
-              >이디야 뉴스</a
-            >
+            <a href="./news.html" class="header__nav__link">이디야 뉴스</a>
           </li>
           <li class="header__nav__item">
-            <a href="./views/map.html" class="header__nav__link">매장 찾기</a>
+            <a href="./map.html" class="header__nav__link">매장 찾기</a>
           </li>
         </ul>
+        <button
+          type="button"
+          class="header__nav__close__button buttonNone"
+          aria-label="메뉴 닫기"
+        >
+          <span aria-hidden="true">X</span>
+        </button>
       </nav>
-      <button type="button" class="header__hamburger">
+      <button
+        type="button"
+        class="header__hamburger buttonNone"
+        aria-label="메뉴 열기"
+      >
         <span class="header__hamburger__top"></span>
         <span class="header__hamburger__middle"></span>
         <span class="header__hamburger__bottom"></span>
@@ -81,7 +76,7 @@
           <button class="beverage__button latte__blossom__iced">
             ICED 벚꽃 라떼
           </button>
-          <div class="beverage__info is-active">
+          <div class="beverage__info">
             <div class="beverage__info__title">
               <p class="beverage__info__title__main">ICED 벚꽃라떼</p>
               <p class="beverage__info__title__sub">cherry Blossom Latte</p>
@@ -103,7 +98,7 @@
               <span class="beverage__info__nutrient__name">(149mg)</span>
               <span class="beverage__info__nutrient__name">(0mg)</span>
             </div>
-            <button class="beverage__info__closebtn">x</button>
+            <button class="beverage__info__closebtn">X</button>
           </div>
         </li>
         <li class="beverage__item">
@@ -132,7 +127,7 @@
               <span class="beverage__info__nutrient__name">(149mg)</span>
               <span class="beverage__info__nutrient__name">(0mg)</span>
             </div>
-            <button class="beverage__info__closebtn">x</button>
+            <button class="beverage__info__closebtn">X</button>
           </div>
         </li>
         <li class="beverage__item">
@@ -162,7 +157,7 @@
               <span class="beverage__info__nutrient__name">(262mg)</span>
               <span class="beverage__info__nutrient__name">(12mg)</span>
             </div>
-            <button class="beverage__info__closebtn">x</button>
+            <button class="beverage__info__closebtn">X</button>
           </div>
         </li>
         <li class="beverage__item">
@@ -192,7 +187,7 @@
               <span class="beverage__info__nutrient__name">(299mg)</span>
               <span class="beverage__info__nutrient__name">(12mg)</span>
             </div>
-            <button class="beverage__info__closebtn">x</button>
+            <button class="beverage__info__closebtn">X</button>
           </div>
         </li>
         <li class="beverage__item">
@@ -222,7 +217,7 @@
               <span class="beverage__info__nutrient__name">(4mg)</span>
               <span class="beverage__info__nutrient__name">(0mg)</span>
             </div>
-            <button class="beverage__info__closebtn">x</button>
+            <button class="beverage__info__closebtn">X</button>
           </div>
         </li>
         <li class="beverage__item">
@@ -252,7 +247,7 @@
               <span class="beverage__info__nutrient__name">(5mg)</span>
               <span class="beverage__info__nutrient__name">(0mg)</span>
             </div>
-            <button class="beverage__info__closebtn">x</button>
+            <button class="beverage__info__closebtn">X</button>
           </div>
         </li>
         <li class="beverage__item">
@@ -282,7 +277,7 @@
               <span class="beverage__info__nutrient__name">(5mg)</span>
               <span class="beverage__info__nutrient__name">(0mg)</span>
             </div>
-            <button class="beverage__info__closebtn">x</button>
+            <button class="beverage__info__closebtn">X</button>
           </div>
         </li>
         <li class="beverage__item">
@@ -312,7 +307,7 @@
               <span class="beverage__info__nutrient__name">(7mg)</span>
               <span class="beverage__info__nutrient__name">(0mg)</span>
             </div>
-            <button class="beverage__info__closebtn">x</button>
+            <button class="beverage__info__closebtn">X</button>
           </div>
         </li>
       </ul>
@@ -322,44 +317,50 @@
     <footer class="footer">
       <ul class="footer__list">
         <li class="footer__item">
-          <a href="#" class="footer__link"></a>
+          <a href="#" class="footer__link">개인정보처리방침</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">맴버스 이용약관</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">가맹 안내</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">대량쿠폰구매</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">채용안내</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">고객의 소리</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">사이트맵</a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">나중에 </a>
+          <a href="#" class="footer__link">점주의 방</a>
         </li>
       </ul>
       <address class="footer__info">
         <div class="footer__logo">
-          <h2 class="sr-only">알아서</h2>
-          <img src="" alt="#" />
+          <h2 class="sr-only">이디야커피 연락 정보 입니다.</h2>
+          <img src="./images/brand-dark.svg" alt="이디야커피" />
         </div>
         <p class="footer__address">
-          <span></span>
-          <a href="tel:" type=""></a>
-          <a href="tel:" type=""></a>
-          <span>알아서</span>
-          <span></span>
-          <span></span>
+          <span
+            >서울특별시 강남구 논현로 636 이디야빌딩(서울특별시 강남구 논현동
+            221-17)</span
+          >
+          <a href="tel:+82-02-543-6467" type="">TEL : 02-543-6467</a>
+          <a href="fax:+82-02-543-7191" type="">FAX : 02-543-7191</a>
+          <span class="footer__address__bold">사업자등록번호</span> :
+          107-86-16302
+          <span class="footer__address__bold">통신판매업 신고</span> : 강남 제
+          002519호 <span class="footer__address__bold">대표이사</span> : 문창기
         </p>
-        <small class="footer__copy"> &copy; </small>
+        <small class="footer__copy">
+          &copy; 2017 EDIYA COFFEE COMPANY. ALL RIGHTS RESERVED..</small
+        >
       </address>
     </footer>
   </body>
