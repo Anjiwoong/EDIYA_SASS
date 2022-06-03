@@ -34,7 +34,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header" style="display: none">
       <div class="header__logo__container">
         <h1 class="sr-only">이디야커피</h1>
         <a href="./index.html"
@@ -78,28 +78,47 @@
     <section class="signup">
       <h2 class="signup__title">회원가입</h2>
       <p class="signup__sub">
-        <span class="signup__sub__title">welcome</span>
-        <span class="signup__sub__title">이디야커피</span>
+        <span class="signup__sub__title">Join Us, Ediya Coffee</span>
+        <span class="signup__sub__title">이디야멤버스 가입을 진행합니다.</span>
       </p>
 
       <form class="signup__form">
         <fieldset>
           <legend>회원가입</legend>
-          <label>이메일</label>
-          <input type="email" />
-          <label>패스워드</label>
-          <input type="password" />
-          <label>패스워드확인</label>
-          <input type="password" />
+          <div class="signup__email">
+            <label for="userEmail">이메일</label>
+            <input type="email" id="userEmail" name="userEmail" required />
+          </div>
+          <div class="signup__password">
+            <label for="userPassword">패스워드</label>
+            <input
+              type="password"
+              id="userPassword"
+              name="userPassword"
+              required
+            />
+          </div>
+          <div class="signup__password__check">
+            <label for="checkPassword">패스워드확인</label>
+            <input
+              type="password"
+              id="checkPassword"
+              name="checkPassword"
+              required
+            />
+          </div>
+          <div class="signup__buttons">
+            <a href="" role="button" class="signup__button">가입하기</a>
+            <a href="'./login.html" role="button" class="signup__login__button"
+              >로그인</a
+            >
+          </div>
         </fieldset>
-
-        <a href="" role="button">로그인</a>
-        <a href="'./login.html" role="button">회원가입</a>
       </form>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" style="display: none">
       <ul class="footer__list">
         <li class="footer__item">
           <a href="#" class="footer__link"></a>
