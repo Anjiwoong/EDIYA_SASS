@@ -27,11 +27,12 @@
   }
 
   // display none!!!
-  &__info {
-    // display: none;
+  &__info.is-active {
+    display: block;
   }
 
   &__info {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -102,74 +103,98 @@
 
   // 음료 이미지들
   .latte__blossom__iced {
-    background: url("../../images/iced-cherry-blossoms-latte.png") no-repeat
-      center / 80% 80%;
+    &:hover::before {
+      transform: scale(1.2);
+    }
 
-    &:hover {
-      background-size: 100%;
+    &::before {
+      @include hoverScale;
+      background: url("../../images/iced-cherry-blossoms-latte.png") no-repeat
+        center / 70% 70%;
     }
   }
 
   .latte__blossom__hot {
-    background: url("../../images/hot-cherry-blossoms-latte.png") no-repeat
-      center / 80% 80%;
+    &:hover::before {
+      transform: scale(1.2);
+    }
 
-    &:hover {
-      background-size: 100%;
+    &::before {
+      @include hoverScale;
+      background: url("../../images/hot-cherry-blossoms-latte.png") no-repeat
+        center / 70% 70%;
     }
   }
 
   .brownie__chocolate__iced {
-    background: url("../../images/iced-brownie-chocolate.png") no-repeat center /
-      80% 80%;
+    &:hover::before {
+      transform: scale(1.2);
+    }
 
-    &:hover {
-      background-size: 100%;
+    &::before {
+      @include hoverScale;
+      background: url("../../images/iced-brownie-chocolate.png") no-repeat
+        center / 70% 70%;
     }
   }
 
   .brownie__chocolate__hot {
-    background: url("../../images/hot-brownie-chocolate.png") no-repeat center /
-      80% 80%;
+    &:hover::before {
+      transform: scale(1.2);
+    }
 
-    &:hover {
-      background-size: 100%;
+    &::before {
+      @include hoverScale;
+      background: url("../../images/hot-brownie-chocolate.png") no-repeat center /
+        70% 70%;
     }
   }
 
   .jeju__original__tea {
-    background: url("../../images/jeju-green-tangerine-tea.png") no-repeat
-      center / 80% 80%;
+    &:hover::before {
+      transform: scale(1.2);
+    }
 
-    &:hover {
-      background-size: 100%;
+    &::before {
+      @include hoverScale;
+      background: url("../../images/jeju-green-tangerine-tea.png") no-repeat
+        center / 70% 70%;
     }
   }
 
   .jeju__blossom__tea {
-    background: url("../../images/jeju-green-tangerine-blossom.png") no-repeat
-      center / 80% 80%;
+    &:hover::before {
+      transform: scale(1.2);
+    }
 
-    &:hover {
-      background-size: 100%;
+    &::before {
+      @include hoverScale;
+      background: url("../../images/jeju-green-tangerine-blossom.png") no-repeat
+        center / 70% 70%;
     }
   }
 
   .pomegranate__tea {
-    background: url("../../images/pomegranate-tea.png") no-repeat center / 80%
-      80%;
+    &:hover::before {
+      transform: scale(1.2);
+    }
 
-    &:hover {
-      background-size: 100%;
+    &::before {
+      @include hoverScale;
+      background: url("../../images/pomegranate-tea.png") no-repeat center / 80%
+        80%;
     }
   }
 
   .pomegranate__apple__tea {
-    background: url("../../images/pomegranate-apple-lime.png") no-repeat center /
-      80% 80%;
+    &:hover::before {
+      transform: scale(1.2);
+    }
 
-    &:hover {
-      background-size: 100%;
+    &::before {
+      @include hoverScale;
+      background: url("../../images/pomegranate-apple-lime.png") no-repeat
+        center / 70% 70%;
     }
   }
 

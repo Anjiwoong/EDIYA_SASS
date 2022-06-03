@@ -61,3 +61,24 @@
   background: $bg;
   padding: $pd;
 }
+
+// hover transition
+@mixin hoverScale(
+  $content: "",
+  $pos: absolute,
+  $dp: block,
+  $t: 0,
+  $l: 0,
+  $h: 100%,
+  $w: 100%,
+  $trans: transform 0.5s
+) {
+  content: $content;
+  position: $pos;
+  display: $dp;
+  top: $t;
+  left: $l;
+  height: $h;
+  width: $w;
+  transition: $trans;
+}
