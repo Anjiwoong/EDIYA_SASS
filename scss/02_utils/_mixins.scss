@@ -44,3 +44,20 @@
   justify-content: $justify;
   align-items: $items;
 }
+
+// 버튼 스타일 제거
+@mixin removeBtnStyle(
+  $webkit: none,
+  $moz: none,
+  $appear: none,
+  $border: none,
+  $bg: transparent,
+  $pd: 0
+) {
+  -webkit-appearance: $webkit;
+  -moz-appearance: $moz;
+  appearance: $appear;
+  border: $border;
+  background: $bg;
+  padding: $pd;
+}

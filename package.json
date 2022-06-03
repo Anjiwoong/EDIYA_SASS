@@ -14,6 +14,7 @@
     "postcss-cli": "^9.1.0",
     "postcss-combine-media-query": "^1.0.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.52.1"
+    "sass": "^1.52.1",
+    "sass-math": "^1.0.0"
   }
 }
