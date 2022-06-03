@@ -1,0 +1,89 @@
+.map {
+  border-top: 1px solid $grayscaleGray3;
+  @include paddingX(20px);
+  @include paddingY(20px);
+  color: $primaryBlue;
+
+  &__search {
+    &__form {
+      position: relative;
+    }
+    &__tab {
+      display: flex;
+      [aria-selected="true"] {
+        background: $primaryBlue;
+        color: $white;
+        font-weight: 700;
+      }
+
+      &__item {
+        @include removeBtnStyle;
+        height: rem(32px);
+        width: 50%;
+        background: $grayscaleSnow;
+        color: $primaryBlue;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      @include paddingY(8px);
+      border: 8px solid $primaryBlue;
+      text-indent: rem(8px);
+      font-size: rem(17px);
+    }
+
+    &__btn {
+      @include removeBtnStyle;
+      background: url("../../images/icon-search.svg") no-repeat 98% center;
+      width: rem(20px);
+      height: rem(20px);
+      position: absolute;
+      top: 56%;
+      right: rem(20px);
+    }
+
+    &__pannel {
+      background: $grayscaleSnow;
+      padding: 3px;
+      &__item {
+        width: 100%;
+        display: flow-root;
+        background: $white;
+        margin-top: 3px;
+        padding: 8px;
+        img {
+          float: left;
+          width: rem(45px);
+          margin-right: 10px;
+        }
+      }
+      &__detail {
+        font-weight: 700;
+      }
+
+      &__address {
+        font-size: rem(13px);
+      }
+    }
+  }
+
+  &__wrapper {
+    .iframe-container {
+      margin-top: rem(20px);
+      @include respondIframe(4, 3);
+    }
+  }
+
+  @include desktop {
+    position: relative;
+
+    &__search {
+      position: absolute;
+      top: 75px;
+      right: 50px;
+      z-index: 1;
+      width: rem(420px);
+    }
+  }
+}

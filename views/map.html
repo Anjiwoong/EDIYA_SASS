@@ -38,7 +38,7 @@
       <div class="header__logo">
         <h1 class="sr-only">늘 당신 곁에, 이디야커피 공식 홈페이지 입니다.</h1>
         <a href="./index.html" class="header__logo__link"
-          ><img src="./images/brand.svg" alt="이디야커피"
+          ><img src="../images/brand.svg" alt="이디야커피"
         /></a>
       </div>
       <nav class="header__nav">
@@ -82,41 +82,83 @@
     </header>
 
     <!-- Main -->
-    <section class="promotion">
-      <h2 class="sr-only promotion__title">추천메뉴</h2>
-      <p class="promotion__slogan">
-        ALWAYS BESIDE YOU <strong>EDIYA COFFEE</strong>
-      </p>
-
-      <p class="promotion__subtitle">
-        늘 당신 곁에, 이디야 커피의 다양한 메뉴를 맛보세요.
-      </p>
-      <img src="./images//cheese-" alt="치즈쿠키쉐이크" />
-      <img
-        src="./images/choco-rice-img.png"
-        alt="초코 묻고 더블쉐이크,밥대신 라이스쉐이크"
-      />
-      <a href="'./views/beverages.html" role="button" class="promotion__button"
-        >메뉴보기</a
-      >
-    </section>
-    <section class="about">
-      <h2 class="sr-only">알아서 쓰셍쇼</h2>
-      <div class="about__video">
-        <iframe
-          width="1264"
-          height="720"
-          src="https://www.youtube.com/embed/UGPo0RqhbKU"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
+    <section class="map">
+      <div class="map__search">
+        <form class="map__search__form">
+          <fieldset>
+            <legend>매장검색</legend>
+            <div role="tablist" class="map__search__tab">
+              <button
+                type="button"
+                role="tab"
+                aria-selected="true"
+                aria-controls="store"
+                class="map__search__tab__item"
+              >
+                점포명
+              </button>
+              <button
+                type="button"
+                role="tab"
+                aria-selected="false"
+                aria-controls="address"
+                class="map__search__tab__item"
+              >
+                주소
+              </button>
+            </div>
+            <input
+              type="search"
+              placeholder="검색어 입력(예: 길음)"
+              class="map__search__input"
+            />
+            <button type="button" class="map__search__btn"></button>
+          </fieldset>
+        </form>
+        <div class="map__search__pannel">
+          <div
+            tabindex="0"
+            role="tabpanel"
+            id="store"
+            class="map__search__pannel__item"
+          >
+            <img src="../images/store-thumbnail.svg" alt="" />
+            <p class="map__search__pannel__detail">길음 뉴타운점</p>
+            <p class="map__search__pannel__address">
+              서울 성북구 길음로 74 (길음동, 길음 에스에이치빌)
+            </p>
+          </div>
+          <div
+            tabindex="0"
+            role="tabpanel"
+            id="address"
+            class="map__search__pannel__item"
+          >
+            <img src="../images/store-thumbnail.svg" alt="" />
+            <p class="map__search__pannel__detail">길음 뉴타운점</p>
+            <p class="map__search__pannel__address">
+              서울 성북구 도봉로 11 (길음동, 삼주빌딩)
+            </p>
+          </div>
+        </div>
       </div>
-      <article class="about__info">
-        <div class="about__notice"></div>
-        <div class="about__news"></div>
-      </article>
+
+      <div class="map__wrapper">
+        <section class="store__map">
+          <h3 class="sr-only">이디야 매장위치</h3>
+          <figure class="iframe-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3160.676332998653!2d127.01842291539721!3d37.60977587978994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357cbc8c8d5ae07f%3A0x8719b6556e5fc3b4!2z7J2065SU7JW8IOq4uOydjOuJtO2DgOyatOygkA!5e0!3m2!1sko!2skr!4v1601627418910!5m2!1sko!2skr"
+              frameborder="0"
+              style="border: 0"
+              allowfullscreen
+              aria-hidden="false"
+              tabindex="0"
+              aria-label="이디야 매장 지도"
+            ></iframe>
+          </figure>
+        </section>
+      </div>
     </section>
 
     <!-- Footer -->
@@ -150,7 +192,7 @@
       <address class="footer__info">
         <div class="footer__logo">
           <h2 class="sr-only">이디야커피 연락 정보 입니다.</h2>
-          <img src="./images/brand-dark.svg" alt="이디야커피" />
+          <img src="../images/brand-dark.svg" alt="이디야커피" />
         </div>
         <p class="footer__address">
           <span
