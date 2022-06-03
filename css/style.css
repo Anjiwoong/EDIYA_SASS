@@ -461,6 +461,12 @@ button {
   margin-right: 0.25rem;
   position: relative;
 }
+.login__save [for=check] {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
 .login__save [type=checkbox] {
   display: none;
 }
@@ -548,6 +554,9 @@ button {
 .signup__sub__title:nth-child(2) {
   font-size: 0.75rem;
 }
+.signup__form {
+  margin-top: 5rem;
+}
 @media (min-width: 768px) {
   .signup__form {
     min-width: 768px;
@@ -560,7 +569,7 @@ button {
 }
 .signup__form legend ~ div {
   position: relative;
-  margin-bottom: 3.25rem;
+  margin-bottom: 2.5rem;
 }
 .signup__form fieldset label {
   font-size: 1.125rem;
@@ -582,6 +591,7 @@ button {
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: stretch;
+  margin-top: 4.375rem;
 }
 .signup [role=button] {
   display: inline-block;

@@ -37,10 +37,6 @@
     }
   }
 
-  // fieldset {
-  //   position: relative;
-  // }
-
   &__email {
     margin-bottom: rem(52px);
   }
@@ -83,6 +79,10 @@
       border-radius: rem(2px);
       margin-right: rem(4px);
       position: relative;
+    }
+
+    [for="check"] {
+      @include flexbox($items: center);
     }
 
     [type="checkbox"] {

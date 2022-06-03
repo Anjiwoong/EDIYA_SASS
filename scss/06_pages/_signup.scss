@@ -32,6 +32,8 @@
   }
 
   &__form {
+    margin-top: rem(80px);
+
     @include desktop {
       @include boxSizeMinMax($max: 540px);
       @include autoMargin;
@@ -39,7 +41,7 @@
 
     legend ~ div {
       position: relative;
-      margin-bottom: rem(52px);
+      margin-bottom: rem(40px);
       // &.is--focus + label {
       // }
     }
@@ -64,6 +66,7 @@
 
   &__buttons {
     @include flexbox($direction: row, $wrap: wrap);
+    margin-top: rem(70px);
   }
 
   [role="button"] {
