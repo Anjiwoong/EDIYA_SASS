@@ -1,3 +1,155 @@
+@import "../05_layout";
 // 이디야 홈(메인 페이지) 시작 ------------------------------------------------------------- /
+body {
+  background: $grayscaleWhite;
+}
+
+// promotion area
+.promotion {
+  background: $secondaryLightBlue;
+  position: relative;
+  text-align: center;
+
+  // slogan title
+  &__slogan {
+    @include autoMargin;
+    @include mobile {
+      padding-top: rem(42px);
+      @include flexbox($direction: column, $justify: center, $items: center);
+    }
+
+    @include desktop {
+      padding-top: rem(42px);
+      // text-align: center;
+    }
+  }
+
+  // slogan agter
+  &__slogan::after {
+    content: "";
+    width: rem(40px);
+    background-color: $black;
+    height: rem(1px);
+    margin-top: rem(30px);
+    margin-bottom: rem(30px);
+
+    @include desktop {
+      display: block;
+      @include autoMargin;
+    }
+  }
+
+  //promotion subtitle
+  &__subtitle {
+    text-align: center;
+  }
+
+  // promotion product
+
+  &__product {
+    @include pos;
+    z-index: 999;
+
+    &__left {
+      @include mobile {
+        display: none;
+      }
+
+      @include desktop {
+        top: 180px;
+        left: 15%;
+      }
+    }
+
+    &__right {
+      @include mobile {
+        top: 180px;
+        left: 10%;
+        width: rem(225px);
+        height: rem(161px);
+      }
+
+      @include desktop {
+        top: 180px;
+        right: 15%;
+      }
+    }
+  }
+
+  //promotion button
+  &__button {
+    @include autoMargin;
+    display: inline-block;
+    border: 1px solid $primaryBlue;
+    border-radius: 0;
+    background: transparent;
+    color: $primaryBlue;
+
+    @include mobile {
+      // width: rem(91px);
+      // width: rem(31px);
+    }
+
+    @include desktop {
+    }
+  }
+}
+
+.about {
+  /* iframe  */
+  @include autoMargin;
+
+  background: $grayscaleWhite;
+
+  @include mobile {
+    margin-top: rem(166px);
+  }
+
+  @include desktop {
+    width: rem(740px);
+    margin-top: rem(322px);
+  }
+}
+
+// video
+.about__video {
+  @include respondIframe;
+}
+
+.about__info {
+  @include flexbox;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  @include desktop {
+  }
+}
+
+// notice
+.about__notice {
+  @include mobile {
+  }
+
+  @include desktop {
+    width: 50%;
+  }
+
+  &__button {
+    background: $gradientBlue;
+    color: $white;
+  }
+}
+
+// news
+.about__news {
+  @include mobile {
+  }
+
+  @include desktop {
+    width: 50%;
+  }
+}
 
 // 이디야 홈(메인 페이지) 종료 ------------------------------------------------------------------ /

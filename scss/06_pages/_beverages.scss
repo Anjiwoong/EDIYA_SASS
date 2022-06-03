@@ -1,8 +1,251 @@
-// 이디야 음료 시작 ----------------------------------------------------------------- /
+.header {
+  display: none;
+}
 
 .beverage {
-  background: yellow;
+  &__list {
+    @include flexbox($wrap: wrap);
+  }
+
+  &__item {
+    background: $grayscaleSnow;
+    position: relative;
+    @include paddingY(20px);
+  }
+
+  &__button {
+    display: block;
+    width: rem(323px);
+    height: rem(323px);
+    @include removeBtnStyle;
+    padding-top: rem(313px);
+    color: $grayscaleBlack;
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: rem(16px);
+  }
+
+  // display none!!!
+  &__info.is-active {
+    display: block;
+  }
+
+  &__info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $baveragesOpacityBackground;
+
+    &__title {
+      margin-top: rem(30px);
+      @include marginX(20px);
+      border-bottom: 1px solid $grayscaleBlack;
+
+      &__main {
+        color: $grayscaleBlack;
+        font-weight: 400;
+        font-size: rem(18px);
+        line-height: rem(18px);
+      }
+
+      &__sub {
+        color: $grayscaleGray;
+        font-weight: 400;
+        font-size: rem(14px);
+        margin-top: rem(8px);
+        margin-bottom: rem(16px);
+      }
+    }
+
+    &__detail {
+      @include marginX(20px);
+      font-weight: 400;
+      line-height: rem(22px);
+      margin-top: rem(8px);
+    }
+
+    &__closebtn {
+      @include removeBtnStyle;
+      position: absolute;
+      top: rem(16px);
+      right: rem(16px);
+      width: rem(20px);
+      height: rem(20px);
+    }
+
+    &__nutrient {
+      position: absolute;
+      bottom: 0;
+      font-size: rem(13px);
+      height: rem(70px);
+      background: $grayscaleSnow;
+      width: 100%;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 70%;
+        left: 50%;
+        position: absolute;
+        border-left: 1px solid $grayscaleBlack;
+      }
+
+      &__name {
+        width: rem(70px);
+      }
+    }
+  }
+
+  // 음료 이미지들
+  .latte__blossom__iced {
+    &:hover::before {
+      transform: scale(1.2);
+    }
+
+    &::before {
+      @include hoverScale;
+      background: url("../../images/iced-cherry-blossoms-latte.png") no-repeat
+        center / 70% 70%;
+    }
+  }
+
+  .latte__blossom__hot {
+    &:hover::before {
+      transform: scale(1.2);
+    }
+
+    &::before {
+      @include hoverScale;
+      background: url("../../images/hot-cherry-blossoms-latte.png") no-repeat
+        center / 70% 70%;
+    }
+  }
+
+  .brownie__chocolate__iced {
+    &:hover::before {
+      transform: scale(1.2);
+    }
+
+    &::before {
+      @include hoverScale;
+      background: url("../../images/iced-brownie-chocolate.png") no-repeat
+        center / 70% 70%;
+    }
+  }
+
+  .brownie__chocolate__hot {
+    &:hover::before {
+      transform: scale(1.2);
+    }
+
+    &::before {
+      @include hoverScale;
+      background: url("../../images/hot-brownie-chocolate.png") no-repeat center /
+        70% 70%;
+    }
+  }
+
+  .jeju__original__tea {
+    &:hover::before {
+      transform: scale(1.2);
+    }
+
+    &::before {
+      @include hoverScale;
+      background: url("../../images/jeju-green-tangerine-tea.png") no-repeat
+        center / 70% 70%;
+    }
+  }
+
+  .jeju__blossom__tea {
+    &:hover::before {
+      transform: scale(1.2);
+    }
+
+    &::before {
+      @include hoverScale;
+      background: url("../../images/jeju-green-tangerine-blossom.png") no-repeat
+        center / 70% 70%;
+    }
+  }
+
+  .pomegranate__tea {
+    &:hover::before {
+      transform: scale(1.2);
+    }
+
+    &::before {
+      @include hoverScale;
+      background: url("../../images/pomegranate-tea.png") no-repeat center / 80%
+        80%;
+    }
+  }
+
+  .pomegranate__apple__tea {
+    &:hover::before {
+      transform: scale(1.2);
+    }
+
+    &::before {
+      @include hoverScale;
+      background: url("../../images/pomegranate-apple-lime.png") no-repeat
+        center / 70% 70%;
+    }
+  }
+
+  @include mobile {
+    min-width: rem(350px);
+
+    &__item {
+      width: 100%;
+      @include marginX(18px);
+      margin-top: rem(20px);
+    }
+
+    &__info {
+      &__nutrient {
+        @include flexbox(
+          $direction: column,
+          $wrap: wrap,
+          $justify: center,
+          $items: center
+        );
+      }
+    }
+  }
+
+  @include desktop {
+    max-width: rem(740px);
+    margin: 0 auto;
+    margin-top: rem(30px);
+
+    &__list {
+      justify-content: space-between;
+      gap: rem(20px);
+    }
+
+    &__item {
+      width: calc(50% - rem(10px));
+    }
+
+    &__info {
+      &__nutrient {
+        @include flexbox(
+          $direction: column,
+          $wrap: wrap,
+          $justify: center,
+          $items: flex-end
+        );
+      }
+    }
+  }
 }
-.about {
+
+.footer {
+  display: none;
 }
-// 이디야 음료 종료 ----------------------------------------------------------------- /

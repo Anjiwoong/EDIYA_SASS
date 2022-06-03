@@ -1,3 +1,108 @@
-// 회원 가입 시작 ---------------------------------------------------------- /
+// ------ 회원 가입 시작 ------//
+.signup {
+  padding: rem(70px) rem(32px) rem(50px) rem(32px);
+  color: $white;
+  font-weight: 100;
+  height: 100vh;
+  // 영상으로 수정하기
+  background: url("/images/coffee-mobile.jpg") no-repeat center center;
 
-// 회원 가입 종료 ---------------------------------------------------------- /
+  @include desktop {
+    background: url("/images/coffee-desktop.jpg") no-repeat;
+  }
+
+  &__title {
+    font-size: rem(36px);
+    margin-bottom: rem(24px);
+    text-align: center;
+  }
+
+  &__sub__title {
+    display: block;
+    text-align: center;
+
+    &:nth-child(1) {
+      font-size: rem(18px);
+      font-weight: 300;
+    }
+
+    &:nth-child(2) {
+      font-size: rem(12px);
+    }
+  }
+
+  &__form {
+    margin-top: rem(80px);
+
+    @include desktop {
+      @include boxSizeMinMax($max: 540px);
+      @include autoMargin;
+    }
+
+    legend ~ div {
+      position: relative;
+      margin-bottom: rem(40px);
+      // &.is--focus + label {
+      // }
+    }
+
+    fieldset label {
+      font-size: rem(18px);
+      position: absolute;
+      left: 0.5rem;
+      bottom: 0.5rem;
+    }
+  }
+
+  [type="email"],
+  [type="password"] {
+    width: 100%;
+    height: rem(48px);
+    border: 0;
+    border-bottom: 1px solid $white;
+    background: transparent;
+    vertical-align: bottom;
+  }
+
+  &__buttons {
+    @include flexbox($direction: row, $wrap: wrap);
+    margin-top: rem(70px);
+  }
+
+  [role="button"] {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: rem(48px);
+    padding: rem(9px) 0;
+    font-weight: 600;
+    font-size: rem(20px);
+    border: 1px solid $white;
+    border-radius: 0.5rem;
+
+    @include desktop {
+      width: 48.5%;
+    }
+  }
+
+  &__button {
+    margin-bottom: rem(15px);
+    border: 0;
+    background: $grayscaleWhite;
+    color: $accentAmber;
+    background: $grayscaleWhite url("../images/icon-arrow-amber.svg") no-repeat
+      right rem(14px) center;
+
+    @include desktop {
+      margin-right: rem(20px);
+    }
+  }
+
+  &__signup__button {
+    background: url("../images/icon-arrow-white.svg") no-repeat right rem(14px)
+      center;
+    opacity: 0.8;
+  }
+}
+
+// ------ 회원 가입 종료 ------//
