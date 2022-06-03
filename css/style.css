@@ -63,12 +63,11 @@ body * {
   tap-highlight-color: rgba(255, 255, 200, 0.3);
 }
 
-body {
+[class] {
   margin: 0;
-  padding: 0;
 }
 
-[class] {
+body {
   margin: 0;
 }
 
@@ -128,8 +127,262 @@ button {
   cursor: pointer;
 }
 
-.beverage {
-  background: yellow;
+.header {
+  display: none;
+}
+
+.beverage__list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.beverage__item {
+  background: #f5f5f5;
+  position: relative;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+.beverage__button {
+  display: block;
+  width: 20.1875rem;
+  height: 20.1875rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  padding-top: 19.5625rem;
+  color: #0f0f0f;
+  margin: 0 auto;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.beverage__info.is-active {
+  display: block;
+}
+.beverage__info {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.beverage__info__title {
+  margin-top: 1.875rem;
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  border-bottom: 1px solid #0f0f0f;
+}
+.beverage__info__title__main {
+  color: #0f0f0f;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+}
+.beverage__info__title__sub {
+  color: #616161;
+  font-weight: 400;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.beverage__info__detail {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  margin-top: 0.5rem;
+}
+.beverage__info__closebtn {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 0;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.beverage__info__nutrient {
+  position: absolute;
+  bottom: 0;
+  font-size: 0.8125rem;
+  height: 4.375rem;
+  background: #f5f5f5;
+  width: 100%;
+}
+.beverage__info__nutrient::after {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 70%;
+  left: 50%;
+  position: absolute;
+  border-left: 1px solid #0f0f0f;
+}
+.beverage__info__nutrient__name {
+  width: 4.375rem;
+}
+.beverage .latte__blossom__iced:hover::before {
+  transform: scale(1.2);
+}
+.beverage .latte__blossom__iced::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  background: url("../../images/iced-cherry-blossoms-latte.png") no-repeat center/70% 70%;
+}
+.beverage .latte__blossom__hot:hover::before {
+  transform: scale(1.2);
+}
+.beverage .latte__blossom__hot::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  background: url("../../images/hot-cherry-blossoms-latte.png") no-repeat center/70% 70%;
+}
+.beverage .brownie__chocolate__iced:hover::before {
+  transform: scale(1.2);
+}
+.beverage .brownie__chocolate__iced::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  background: url("../../images/iced-brownie-chocolate.png") no-repeat center/70% 70%;
+}
+.beverage .brownie__chocolate__hot:hover::before {
+  transform: scale(1.2);
+}
+.beverage .brownie__chocolate__hot::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  background: url("../../images/hot-brownie-chocolate.png") no-repeat center/70% 70%;
+}
+.beverage .jeju__original__tea:hover::before {
+  transform: scale(1.2);
+}
+.beverage .jeju__original__tea::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  background: url("../../images/jeju-green-tangerine-tea.png") no-repeat center/70% 70%;
+}
+.beverage .jeju__blossom__tea:hover::before {
+  transform: scale(1.2);
+}
+.beverage .jeju__blossom__tea::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  background: url("../../images/jeju-green-tangerine-blossom.png") no-repeat center/70% 70%;
+}
+.beverage .pomegranate__tea:hover::before {
+  transform: scale(1.2);
+}
+.beverage .pomegranate__tea::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  background: url("../../images/pomegranate-tea.png") no-repeat center/80% 80%;
+}
+.beverage .pomegranate__apple__tea:hover::before {
+  transform: scale(1.2);
+}
+.beverage .pomegranate__apple__tea::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s;
+  background: url("../../images/pomegranate-apple-lime.png") no-repeat center/70% 70%;
+}
+@media (max-width: 767px) {
+  .beverage {
+    min-width: 21.875rem;
+  }
+  .beverage__item {
+    width: 100%;
+    margin-left: 1.125rem;
+    margin-right: 1.125rem;
+    margin-top: 1.25rem;
+  }
+  .beverage__info__nutrient {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .beverage {
+    max-width: 46.25rem;
+    margin: 0 auto;
+    margin-top: 1.875rem;
+  }
+  .beverage__list {
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+  .beverage__item {
+    width: calc(50% - 0.625rem);
+  }
+  .beverage__info__nutrient {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: flex-end;
+  }
+}
+
+.footer {
+  display: none;
 }
 
 .login {
