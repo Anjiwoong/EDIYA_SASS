@@ -2,12 +2,12 @@
 .news {
   display: block;
   position: relative;
-  *:focus {
-    outline: rem(4px) solid $primaryBlue2;
-    outline-offset: -1 * rem(2px);
-    border-radius: rem(4px);
-  }
 
+    *:focus-visible {
+      outline: none;
+      border: 4px solid $primaryBlue2;
+      border-radius: 5px;
+    }
   .sr-only {
     @include a11yHidden;
   }
@@ -302,15 +302,106 @@
   &__prize {
     &__outer {
       margin-top: rem(20px);
+      @include paddingX(15px);
+      padding-top: rem(24px);
+      padding-bottom: rem(100px);
       background: $grayscaleSnow;
     }
 
-
     &__wrapper {
+      @include flexbox($wrap: nowrap);
+    }
+
+    &__year {
+      display: inline-block;
+      margin-left: rem(8px);
+      margin-right: rem(24px);
+      font-size: rem(20px);
+      font-weight: bold;
+      color: $primaryBlue;
+    }
+
+    &__list {
+      // flex-grow: 1;
+      width: 100%;
+      position: relative;
+
+      
+      summary::marker {
+        content: "";
+      }
+
+      details summary::after {
+        content: "";
+        width: rem(24px);
+        height: rem(24px);
+        background: url("../../images/icon-arrow-down.svg") no-repeat;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $primaryBlue3;
+      }
+
+      details[open] summary::after {
+        content: "";
+        width: rem(24px);
+        height: rem(24px);
+        background: url("../../images/icon-arrow-up.svg") no-repeat;
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: $primaryBlue;
+      }
+
+      &::after {
+        content: "";
+        width: rem(5px);
+        height: rem(5px);
+        top: 0;
+        left: 0;
+        border-radius: 100%;
+        background: $primaryBlue;
+        position: absolute;
+        transform: translateX(-30%);
+      }
     }
 
     &__article {
       border-left: 1px solid $primaryBlue3;
+      @include paddingY(12px);
+      padding-left: rem(24px);
+      font-size: rem(13px);
+      
+      summary {
+        transform: translateX(-1 * rem(20px));
+        font-weight: bold;
+      }
+
+      .month {
+        font-size: rem(12px);
+        margin-right: rem(4px);
+        font-weight: normal;
+      }
+
+      img {
+        margin-top: rem(16px);
+      }
+
+      .badge {
+        display: inline-block;
+        @include paddingX(6px);
+        font-size: rem(11px);
+        background: $primaryBlue;
+        line-height: 1.7;
+        color: $primaryBlue4;
+        border-radius: 15px;
+      }
+
+      time {
+        font-size: rem(11px);
+        color: $primaryBlue2;
+        font-weight: bold;
+      }
     }
   }
 
