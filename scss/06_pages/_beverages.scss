@@ -1,7 +1,3 @@
-.header {
-  display: none;
-}
-
 .beverage {
   &__list {
     @include flexbox($wrap: wrap);
@@ -39,6 +35,7 @@
     width: 100%;
     height: 100%;
     background-color: $baveragesOpacityBackground;
+    border: 1px solid $grayscaleGray5;
 
     &__title {
       margin-top: rem(30px);
@@ -244,8 +241,4 @@
       }
     }
   }
-}
-
-.footer {
-  display: none;
 }
