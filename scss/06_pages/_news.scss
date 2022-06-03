@@ -252,9 +252,42 @@
       // pagination
       &__pagination {
         margin-top: rem(15px);
-        background: pink;
+        @include flexbox($justify: center);
+
+        button {
+          background: inherit;
+          border: none;
+          box-shadow: none;
+          border-radius: 0;
+          padding: 0;
+          overflow: visible;
+          cursor: default;
+
+          width: 30px;
+          background: yellow;
+        }
+        .prev {
+          background: url("../../images/button-prev.svg") no-repeat 50% 50%;
+        }
+        
+        .next {
+          background: url("../../images/button-next.svg") no-repeat 50% 50%;
+          
+        }
+        
         &__list {
+          font-size: rem(12px);
+          color: $primaryBlue3;
+          @include marginX(18px);
           @include flexbox($justify: center);
+        }
+
+        &__item {
+          @include marginX(8px);
+        }
+
+        &__link {
+          display: block;
         }
       }
     }
@@ -267,9 +300,13 @@
 
   // 4. prize
   &__prize {
-    &__wrapper {
+    &__outer {
       margin-top: rem(20px);
       background: $grayscaleSnow;
+    }
+
+
+    &__wrapper {
     }
 
     &__article {

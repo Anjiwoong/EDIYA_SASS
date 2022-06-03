@@ -357,15 +357,46 @@ button {
 }
 .news__social__contents__pagination {
   margin-top: 0.9375rem;
-  background: pink;
-}
-.news__social__contents__pagination__list {
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: stretch;
 }
-.news__prize__wrapper {
+.news__social__contents__pagination button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: default;
+  width: 30px;
+  background: yellow;
+}
+.news__social__contents__pagination .prev {
+  background: url("../../images/button-prev.svg") no-repeat 50% 50%;
+}
+.news__social__contents__pagination .next {
+  background: url("../../images/button-next.svg") no-repeat 50% 50%;
+}
+.news__social__contents__pagination__list {
+  font-size: 0.75rem;
+  color: #919bc6;
+  margin-left: 1.125rem;
+  margin-right: 1.125rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: stretch;
+}
+.news__social__contents__pagination__item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.news__social__contents__pagination__link {
+  display: block;
+}
+.news__prize__outer {
   margin-top: 1.25rem;
   background: #f5f5f5;
 }
