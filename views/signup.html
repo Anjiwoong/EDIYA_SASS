@@ -32,6 +32,8 @@
     <!-- 처음으로 가기 버튼 (스태틱 마크업) DOM 스크립트 -->
     <script src="./js/goToTopControl.js" defer></script>
   </head>
+  <!-- 비디오 정지 스크립트 -->
+  <script src="/js/videoStop.js" defer></script>
   <body>
     <!-- Header -->
     <header class="header" style="display: none">
@@ -74,6 +76,12 @@
       </button>
     </header>
 
+    <!-- background video -->
+    <video autoplay muted loop id="myVideo">
+      <source src="../media/coffee-latte-art.mp4" type="video/mp4" />
+    </video>
+    <div class="dimmed-layer"></div>
+
     <!-- Section -->
     <section class="signup">
       <h2 class="signup__title">회원가입</h2>
@@ -86,26 +94,26 @@
         <fieldset>
           <legend>회원가입</legend>
           <div class="signup__email">
-            <label for="userEmail">이메일</label>
             <input type="email" id="userEmail" name="userEmail" required />
+            <label for="userEmail">이메일</label>
           </div>
           <div class="signup__password">
-            <label for="userPassword">패스워드</label>
             <input
               type="password"
               id="userPassword"
               name="userPassword"
               required
             />
+            <label for="userPassword">패스워드</label>
           </div>
           <div class="signup__password__check">
-            <label for="checkPassword">패스워드확인</label>
             <input
               type="password"
               id="checkPassword"
               name="checkPassword"
               required
             />
+            <label for="checkPassword">패스워드확인</label>
           </div>
           <div class="signup__buttons">
             <a href="" role="button" class="signup__button">가입하기</a>

@@ -976,6 +976,27 @@ body {
   background: transparent;
   vertical-align: bottom;
 }
+.login [type=email]:focus ~ label,
+.login [type=password]:focus ~ label {
+  animation-name: scale;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.7) translate(-30%, -100%);
+  }
+}
+.login [type=password]:focus {
+  background: url("/images/icon-visible.svg") no-repeat right 0.625rem bottom 0.4375rem;
+}
 .login__save {
   margin-top: 0.9375rem;
   font-size: 0.75rem;
@@ -1054,17 +1075,30 @@ body {
   opacity: 0.8;
 }
 
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  height: 100%;
+}
+
+.dimmed-layer {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .signup {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   padding: 4.375rem 2rem 3.125rem 2rem;
   color: #fff;
   font-weight: 100;
-  height: 100vh;
-  background: url("/images/coffee-mobile.jpg") no-repeat center center;
-}
-@media (min-width: 768px) {
-  .signup {
-    background: url("/images/coffee-desktop.jpg") no-repeat;
-  }
 }
 .signup__title {
   font-size: 2.25rem;
@@ -1113,6 +1147,27 @@ body {
   border-bottom: 1px solid #fff;
   background: transparent;
   vertical-align: bottom;
+}
+.signup [type=email]:focus ~ label,
+.signup [type=password]:focus ~ label {
+  animation-name: scale;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.7) translate(-30%, -100%);
+  }
+}
+.signup [type=password]:focus {
+  background: url("/images/icon-visible.svg") no-repeat right 0.625rem bottom 0.4375rem;
 }
 .signup__buttons {
   display: flex;
